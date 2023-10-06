@@ -1,0 +1,57 @@
+asyncapi: 2.6.0
+info:
+  title: POC AsyncAPI
+  version: 1.0.0
+  description: AsyncAPI POC
+servers:
+  development:
+    url: 'rabbitmq:5672'
+    protocol: amqp
+    description: 'Containerized broker for development.'
+    security:
+      -
+        user-password: []
+    bindings:
+      amqp:
+        exchange:
+          name: notifications_exchange
+          type: topic
+          durable: true
+          vhost: /
+channels:
+  user/signed-up:
+    subscribe:
+      message:
+        description: An event describing that a user just signed up.
+        headers:
+          type: object
+          properties:
+            type:
+              $ref: '#/components/schemas/message-type'
+            publishedAt:
+              $ref: '#/components/schemas/message-publishedAt'
+        payload:
+          type: object
+          additionalProperties: false
+          properties:
+            fullName:
+              type: string
+            email:
+              type: string
+              format: email
+            age:
+              type: integer
+              minimum: 18
+components:
+  schemas:
+    message-type:
+      type: string
+      description: 'Public type of the message. Format: &lt;context&gt;.&lt;event&gt;'
+      example: user.signed-up
+    message-publishedAt:
+      type: string
+      description: 'Public published at date of the message. Format: &lt;context&gt;.&lt;event&gt;'
+      example: 'Ymd H:i:s ...'
+  securitySchemes:
+    user-password:
+      type: userPassword
