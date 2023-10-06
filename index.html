@@ -76,7 +76,7 @@
           
 
 <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
-    href="#operation-subscribe-user/signedup">
+    href="#operation-subscribe-user/signed-up">
     <span class="bg-green-dark font-bold no-underline text-white uppercase p-1 mr-2 rounded"
         style="height: 21px;font-size: 11px;" title="Subscribe">
         Sub
@@ -84,7 +84,7 @@
     
     <div style="display:inline-block;">
         
-<span class="string-chunk" style="padding-top: 2px;">user/signedup</span>
+<span class="string-chunk" style="padding-top: 2px;">user/signed-up</span>
 
     </div>
     
@@ -228,7 +228,7 @@
     
       
 
-<a name="operation-subscribe-user/signedup"></a>
+<a name="operation-subscribe-user/signed-up"></a>
 <div class="center-block p-8">
   <div class="operation pt-8 pb-8">
     <h3 class="font-mono text-base">
@@ -238,7 +238,7 @@
         title="Subscribe">Sub</span>
       
       
-<span class="string-chunk" >user/signedup</span>
+<span class="string-chunk" >user/signed-up</span>
 
     </h3>
 
@@ -546,6 +546,217 @@ integer
 
   
   
+    <div class="mt-4">
+      
+<div>
+  
+
+<div class="bg-grey-lighter  rounded">
+  <div class="is-open">
+    <div class="js-prop cursor-pointer py-2 flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm" style="word-break: break-word;">Headers</span>
+        
+        
+        
+        <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
+          xmlns="http://www.w3.org/2000/svg" y="0">
+          <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+        </svg>
+        
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+object
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+
+<div class="text-sm markdown"></div>
+
+
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+      <div class="children bg-grey-lightest py-4 rounded">
+        
+          
+            
+            
+            
+              
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm" style="word-break: break-word;">type</span>
+        
+        
+          <span class="border text-orange rounded text-xs ml-3 py-0 px-2">message-type</span>
+        
+        
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+
+<div class="text-sm markdown"><p>Public type of the message. Format: &lt;context&gt;.&lt;event&gt;</p>
+</div>
+
+
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+            
+          
+            
+            
+            
+              
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm" style="word-break: break-word;">publishedAt</span>
+        
+        
+          <span class="border text-orange rounded text-xs ml-3 py-0 px-2">message-publishedAt</span>
+        
+        
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+
+<div class="text-sm markdown"><p>Public published at date of the message. Format: &lt;context&gt;.&lt;event&gt;</p>
+</div>
+
+
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+            
+          
+        
+
+        
+        
+
+        
+        
+          
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional properties are allowed.</p>
+          
+        
+        
+
+        
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+  
 </div>
 
 
@@ -594,6 +805,27 @@ integer
     </div>
   
 
+  
+    <div class="headers-examples mb-4 ">
+      <div class="js-prop cursor-pointer  flex property">
+        <span class="px-2 mr-2 text-grey-lightest text-sm border rounded focus:outline-none cursor-pointer">Headers</span>
+        
+          <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+          </svg>
+        
+      </div>
+      <div class="children headers-examples mt-4">
+        
+        <pre class="hljs mb-4 border border-grey-darkest rounded"><code>{
+  "type": "user.signed-up",
+  "publishedAt": "Ymd H:i:s ..."
+}</code></pre>
+        <h6 class="text-xs font-bold text-grey-darker italic">This example has been generated automatically.</h6>
+        
+      </div>
+    </div>
   
 </form>
 
@@ -911,6 +1143,217 @@ integer
 </div>
 
   
+  
+    <div class="mt-4">
+      
+<div>
+  
+
+<div class="bg-grey-lighter  rounded">
+  <div class="">
+    <div class="js-prop cursor-pointer py-2 flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm" style="word-break: break-word;">Headers</span>
+        
+        
+        
+        <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
+          xmlns="http://www.w3.org/2000/svg" y="0">
+          <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+        </svg>
+        
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+object
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+
+<div class="text-sm markdown"></div>
+
+
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+      <div class="children bg-grey-lightest py-4 rounded">
+        
+          
+            
+            
+            
+              
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm" style="word-break: break-word;">type</span>
+        
+        
+          <span class="border text-orange rounded text-xs ml-3 py-0 px-2">message-type</span>
+        
+        
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+
+<div class="text-sm markdown"><p>Public type of the message. Format: &lt;context&gt;.&lt;event&gt;</p>
+</div>
+
+
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+            
+          
+            
+            
+            
+              
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm" style="word-break: break-word;">publishedAt</span>
+        
+        
+          <span class="border text-orange rounded text-xs ml-3 py-0 px-2">message-publishedAt</span>
+        
+        
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+
+<div class="text-sm markdown"><p>Public published at date of the message. Format: &lt;context&gt;.&lt;event&gt;</p>
+</div>
+
+
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+            
+          
+        
+
+        
+        
+
+        
+        
+          
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional properties are allowed.</p>
+          
+        
+        
+
+        
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+</div>
+
+    </div>
   
 </div>
 
